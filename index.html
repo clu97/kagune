@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kagune</title>
+		<link rel="icon" href="http://68.media.tumblr.com/e3d7bcd1613659456c96888c38557a6a/tumblr_inline_mgpjdek9m51qdlkyg.gif" >
+	</head>
+<style>
+	body{
+		  cursor:url(http://media.tumblr.com/tumblr_lqs4idHqTZ1qfoi4t.png), auto;
+		  color:#444444; 
+		  background-color:black;
+		  /*background:linear-gradient(#fbebfd , #fdebeb, #fdfbeb); */
+		  background-attachment: fixed;
+		  background-size:cover;
+		  background-position:center;
+		  font-family:arial;
+		  font-size:.9em;
+		  margin-left:0em;
+		  margin-right:0em;
+		  margin-top:10em;
+		  margin-bottom:10em;
+		}
+	a {
+			text-decoration:none;
+			color:#f293ad;
+	}
+
+	a:hover{
+			cursor: url(http://media.tumblr.com/tumblr_m2umkqvNUT1qfamg6.gif), auto;
+			color:#f6ccd7;
+
+			-webkit-transition: all 0.2s linear; 
+			-moz-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+	}
+	.desc{
+		grid-row:1;
+		width:60vw;
+		padding:0.8em;
+		font-family:arial;
+		color:white;
+		text-align: center;
+		/*border:1px dashed #f89ca2;*/
+		margin:auto;
+		
+		
+	}
+	.kagune{
+		font-size: 1.3em;
+		font-weight: bold;
+		font-variant:uppercase;
+		color:#be5149;
+	}
+	h1{
+		color:#be5149;
+		font-size:1.3em;
+	}
+	h2{
+		color:#4e4b4b;
+		font-size:1.1em;
+	}
+	.layout{
+		display:grid;
+		margin-left:5em;
+		margin-right:5em;
+		margin-top:1em;
+		margin-bottom:3em;
+		grid-template-rows:repeat(4,1fr);
+		grid-template-columns:repeat(4,1fr);
+		
+		
+		grid-gap:3em;
+		padding:15px;
+
+	}
+	
+	
+	footer{
+		background-color: white;
+		
+		bottom:10px;
+		padding:20px;
+		width:100vw;
+		text-align: center;
+	}
+	.types {
+			/*
+		    width: 325px;
+		    height: 325px;
+		    margin: 15px;
+		    float: left;
+		    */
+		    border: 10px solid #fff;
+		    overflow: hidden;
+		    position: relative;
+		    text-align: center;
+		    box-shadow: 1px 1px 2px #e6e6e6;
+		    cursor: url(http://media.tumblr.com/tumblr_lqs4idHqTZ1qfoi4t.png), auto;
+		    background: #fff url(../images/bgimg.jpg) no-repeat center center
+		}
+		.types .mask, .types .content {
+		    width: 100%; /*size of content inside*/
+		    height: 100%;
+		    position: absolute;
+		    overflow: hidden;
+		    top: 0;
+		    left: 0
+		}
+		.types img {
+		    display: block;
+		    height:100%;
+		    position: relative;
+		}
+		.types h2 {
+		    text-transform: uppercase;
+		    color: #fff;
+		    text-align: center;
+		    position: relative;
+		    font-size: 2em;
+		    padding: 1em;
+		    background: rgba(0, 0, 0, 0.8);
+		    margin: 20px 0 0 0
+		}
+		.types p {
+		    font-family: Georgia, serif;
+		    font-style: italic;
+		    font-size: .9em;
+		    position: relative;
+		    color: #fff;
+		    padding: 10px 20px 20px;
+		    text-align: center
+		}
+		.types a.info {
+		    display: inline-block;
+		    text-decoration: none;
+		    padding: 7px 14px;
+		    background: #000;
+		    color: #fff;
+		    text-transform: uppercase;
+		    box-shadow: 0 0 1px #000;
+		}
+		.types a.info:hover {
+		    box-shadow: 0 0 5px #000;
+		}
+		.types img { 
+		    transition: all 0.2s linear;
+		}
+		.types .mask {
+		    opacity: 0;
+		    background-color: rgba(239,57,57,0.8); 
+		    transition: all 0.4s ease-in-out;
+		    height:100%;
+		}
+		.types h2 {
+		    font-size:14px;
+		    transform: translateX(-100px);
+		    opacity: 0;
+		    transition: all 0.5s ease-in-out;
+		}
+		.types p { 
+		    transform: translateX(100px);
+		    opacity: 0;
+		  transition: all 0.5s linear;
+		}
+		.types a.info{
+		    opacity: 0;
+		  transition: all 0.2s ease-in-out;
+		}
+		.types:hover img { 
+		  transform: scale(1.1);
+		} 
+		.types:hover .mask { 
+		  opacity: 1;
+		}
+		.types:hover h2,
+		.types:hover p,
+		.types:hover a.info {
+		    opacity: 1;
+		    transform: translateY(0px);
+		}
+		.types:hover p {
+		    transition-delay: 0.1s;
+		}
+		.types:hover a.info {
+		    transition-delay: 0.2s;
+		}
+		/*
+		@media only screen and (max-width: 700px) {
+	    .layout {
+	        width: 49.99999%;
+	        margin: 6px 0;
+	    	}
+		}
+
+		@media only screen and (max-width: 500px) {
+		    .layout {
+		        width: 100%;
+		    }
+		}
+
+		/* for content after image gallery & media queries */
+		/*
+		.clearfix:after {
+		    content: "";
+		    clear: both;
+		}
+		*/
+		#haise{
+			position:fixed;
+			bottom:0;
+			right:15px;
+			z-index: .5;
+		}
+		.it{
+			font-size: .8em;
+			font-style: italic;
+			color:#be5149;
+		}
+
+		@media only screen and (max-width: 1000px) {
+		    .layout {
+		        grid-template-rows:repeat(2,1fr);
+				grid-template-columns:repeat(2,1fr);
+		      
+		    }
+		}
+
+		@media only screen and (max-width: 700px) {
+		    .layout {
+		    	margin-left: 1em;
+		      	grid-template-rows:repeat(1,1fr);
+				grid-template-columns:repeat(1,1fr);
+		        
+		    }
+		}
+
+</style>
+<body>
+	<div class="desc">
+	<center>
+	  <span class="kagune">KAGUNE</span> - 
+	  A ghoul's predatory organ and functions as their weapon and claws. It is usually the color red similar to blood but it varies depending each individual. It is composed of RC cells, which flows just like blood, and can become as solid as teeth.<br>
+	  <span class="it">hover each gif to look at the different types !</span>
+	</center>
+	</div>
+	<div class="layout">
+		<div class="types">  
+	     <img src="https://data.whicdn.com/images/219664460/original.gif">
+	     <div class="mask">  
+	     <h2>Ukaku</h2>  
+	     <p>Spreads out like feathers and is released from the shoulder area. It specializes in high speed attacks. Ukakus can be crystallized to deliver high speed torrent of spike-like projectiles but it's short ranged. Ukakus are fast but they run out of stamina quickly. </p>  
+	         <a href="http://tokyoghoul.wikia.com/wiki/Kagune" target="_blank"class="info">Read More</a>  
+	     </div>  
+	  </div> 
+	  <div class="types">  
+	     <img src="https://pic.pimg.tw/silvereric/1406959988-2182454641.gif">
+	     <div class="mask">  
+	     <h2>Koukaku</h2>  
+	     <p>Released below the shoulder blade. Due to its high density of RC cells, it is heavy and extremely robust, giving it the greatest sturdiness and making them very suited for defense. Speed is low due to the heavy weight.</p>  
+	         <a href="http://tokyoghoul.wikia.com/wiki/Kagune" target="_blank"class="info">Read More</a>  
+	     </div>  
+	  </div> 
+	  <div class="types">  
+	     <img src="https://pa1.narvii.com/5958/db3c063d5570862edbae31a55a8177527d58a3b4_hq.gif"> 
+	     <div class="mask">  
+	     <h2>Rinkaku</h2>  
+	     <p>Has an appearance similar to scaled tentacles and is released at the back around the waist. A Rinkaku user has powerful regenerative abilities and can survive the most critical damage. This regenerative poweris due to the easily binding RC cells but because the binding force is weak the kagune is very soft and easy to break.</p>  
+	         <a href="http://tokyoghoul.wikia.com/wiki/Kagune" target="_blank"class="info">Read More</a>  
+	     </div>  
+	  </div> 
+	  <div class="types">  
+	     <img src="https://78.media.tumblr.com/34798b512f20f518ca4b9999831bd5de/tumblr_njje4oMvMa1u9f7vko1_500.gif">
+	     <div class="mask">  
+	     <h2>Bikaku</h2>  
+	     <p>Typically has a tail-like appearance and is released around the tailbone/coccyx. It is good for medium-distance attacks and has decent offense, defence and speed.</p>  
+	         <a href="http://tokyoghoul.wikia.com/wiki/Kagune" target="_blank"class="info">Read More</a>  
+	     </div>  
+	  </div> 
+	</div>
+
+	 <div id="haise">
+	  	<a href="index.html"><img src="thumbsup.png" title="haise says hi"></a> 
+	  </div>
+</body>
+</html>
